@@ -5,17 +5,17 @@ const blockid = document.getElementById("block_id");
 const colourid = document.getElementById("colour_id");
 
 function clearAll(){
-	document.querySelectorAll('grid_item').forEach(e ()=>{
-		e.target.background = 'transparent';
+	document.querySelectorAll('.grid_item').forEach((e) ()=>{
+		e.style.background = 'transparent';
 	});
 }
 
-changeBtn.addEventListner(click,()=>{
-	const idval = blockInput.value.trim();
-	const colourval = colourInput.value.trim();
+changeBtn.addEventListener("click",()=>{
+	const idval = blockid.value.trim();
+	const colourval = colourid.value.trim();
 
 
-	const idnum = Number(idnum);
+	const idnum = Number(idval);
 	if(!idnum || Number.isNaN(idnum) || idnum<1 || idnum >9){
 		alert('please enter a valid block id between 1 and 9');
 		return;
@@ -36,7 +36,7 @@ changeBtn.addEventListner(click,()=>{
      target.style.background = colourval;
 	
 })
-return.addEventListner(click,()=>{
+return.addEventListener("click",()=>{
 	clearAll();
 		blckInput.value = '';
 })
