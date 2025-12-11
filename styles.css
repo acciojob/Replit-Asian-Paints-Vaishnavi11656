@@ -1,1 +1,37 @@
 /*  your css code here. If applicable */
+body{
+font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+padding: 20px;
+display: flex;
+flex-direction: column;
+gap: 16px;
+align-items: start;
+}
+#grid_container{
+display: grid;
+grid-template-columns: repeat(3, 90px);
+grid-template-rows: repeat(3, 90px);
+gap: 10px;
+}
+.grid_item {
+display: flex;
+align-items: center;
+justify-content: center;
+border: 2px solid #d0d0d0;
+background: transparent; /* default */
+width: 90px;
+height: 90px;
+font-weight: 700;
+font-size: 20px;
+transition: background-color 0.12s ease;
+user-select: none;
+}
+.controls{
+display: flex;
+gap: 8px;
+align-items: center;
+flex-wrap: wrap;
+}
+.controls input[type="number"] { width: 88px; padding: 6px; }
+.controls input[type="color"] { width: 52px; height: 34px; padding: 0; border: none; background: none; }
+.controls button { padding: 8px 12px; cursor: pointer; }
